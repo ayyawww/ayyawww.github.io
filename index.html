@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Data Diri - Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+  /* Background with subtle gradient and shapes */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(160deg, #222831 0%, #ACB6E5 100%);
+    min-height: 100vh;
+    margin: 0;
+    color: #000000;
+    overflow-x: hidden;
+  }
+  nav.navbar {
+    background-color: FFC1DArgba(28, 58, 73, 0.85);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #F8F8E1;
+    transition: color 0.3s ease;
+  }
+  .navbar-brand:hover {
+    color: #EF476F;
+  }
+  .nav-link {
+    color: #ffd166cc;
+    font-weight: 600;
+    position: relative;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 0;
+    background: #EF476F;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    color: #EF476F;
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+  header {
+    text-align: center;
+    padding: 5rem 1rem 3rem;
+  }
+  header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #948979;
+    margin-bottom: 0.3rem;
+    text-shadow: 2px 2px 6px #ffffff(239, 71, 111, 0.4);
+  }
+  header p {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #DFD0B8;
+    font-style: italic;
+  }
+  .container-main {
+    max-width: 720px;
+    margin: 0 auto 5rem;
+    background: #ffffffcc;
+    border-radius: 20px;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 15px 25px rgba(239, 71, 111, 0.2);
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  dl dt {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1.8rem;
+    color: #073b4c;
+  }
+  dl dd {
+    font-size: 1.1rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  a.contact-link {
+    color: #575757;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  a.contact-link:hover {
+    text-decoration: underline;
+  }
+  /* Fade in animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    color: #073b4cdd;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+      aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Data Diri</a></li>
+        <li class="nav-item"><a class="nav-link" href="baground.html">Latar Belakang</a></li>
+        <li class="nav-item"><a class="nav-link" href="pendidikan.html">Pendidikan & Hobi</a></li>
+        <li class="nav-item"><a class="nav-link" href="pengalaman.html">Skill & Pengalaman</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="project.html">Project</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <h1>Data Diri</h1>
+  <p>Mengenal Saya Secara Singkat</p>
+</header>
+
+<div class="container-main">
+    <img src="img/Tanpa judul (1920 x 1000 piksel).jpg" width="650" alig="center">
+  <dl>
+    <dt>Nama Lengkap</dt>
+    <dd>Hevyna Azalya Putro</dd>
+    <dt>Tempat, Tanggal Lahir</dt>
+    <dd>Banjarnegara, 12 Juni 2008</dd>
+    <dt>Alamat</dt>
+    <dd>Wangon rt01 rw01</dd>
+    <dt>Telepon</dt>
+    <dd>0895380032680</dd>
+    <dt>Email</dt>
+    <dd><a href="hevynaazalya@gmail.com" class="contact-link">john.doe@example.com</a></dd>
+  </dl>
+</div>
+
+<footer>
+  &copy; 2025 Hevyna - Portfolio
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Highlight active nav link on page load
+  document.querySelectorAll('.nav-link').forEach((link) => {
+    if (link.href === location.href) {
+      link.classList.add('active');
+    }
+  });
+</script>
+</body>
+</html>
